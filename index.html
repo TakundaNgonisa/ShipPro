@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ShipPro Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="userBox"></div>
+
+<div class="top">
+💰 Balance: $<span id="balance">30000</span>
+</div>
+
+<div class="game">
+  <div id="water"></div>
+  <div id="boat">🚤</div>
+</div>
+
+<h1 id="multiplier">1.00x</h1>
+<p id="status">Ready</p>
+
+<div class="controls">
+  <input type="number" id="bet" placeholder="Bet (1 - 5000)">
+  <button onclick="startGame()">BET</button>
+  <button id="cashBtn" onclick="cashOut()">🔐 Locked</button>
+</div>
+
+<!-- 💼 AIRCASH -->
+<div class="wallet">
+  <h3>💼 Aircash Wallet</h3>
+  <input type="number" id="amount">
+  <button onclick="deposit()">Deposit</button>
+  <button onclick="withdraw()">Withdraw</button>
+</div>
+
+<!-- 🤖 AUTO -->
+<div class="autoBox">
+  <h3>🤖 Auto System</h3>
+
+  <input type="number" id="autoCash" placeholder="Auto cash x">
+
+  <button onclick="toggleAutoBet()" id="autoBetBtn">Auto Bet OFF</button>
+  <button onclick="toggleAutoCash()" id="autoCashBtn">Auto Cash OFF</button>
+</div>
+
+<!-- 📊 HISTORY -->
+<div class="history">
+  <h3>📊 Bet History</h3>
+  <div id="historyBox"></div>
+</div>
+
+<div id="popup"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
